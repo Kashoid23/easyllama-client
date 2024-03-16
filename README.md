@@ -44,7 +44,7 @@ EasyLlama::Client::Learners.create({
   location_id: 1,
   internal_id: '12345',
   department_id: 1,
-  role: 'supervisor',
+  role: 'supervisor'
 })
 
 # Update a learner
@@ -60,7 +60,7 @@ EasyLlama::Client::Learners.update(
     location_id: 1,
     internal_id: '12345',
     department_id: 1,
-    role: 'supervisor',
+    role: 'supervisor'
   }
 )
 
