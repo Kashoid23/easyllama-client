@@ -25,7 +25,7 @@ Then, you can use the gem to interact with the Easy Llama API:
 EasyLlama::Client::Locations.all
 
 # Create a new location
-EasyLlama::Client.Locations.create({ name: 'New Office', region_id: 1 })
+EasyLlama::Client::Locations.create({ name: 'New Office', region_id: 1 })
 
 # Retrieve all learners
 EasyLlama::Client::Learners.all
@@ -34,7 +34,7 @@ EasyLlama::Client::Learners.all
 EasyLlama::Client::Learners.find(1)
 
 # Create a new learner
-EasyLlama::Client.Learners.create({
+EasyLlama::Client::Learners.create({
   first_name: 'John',
   middle_name: 'Doe',
   last_name: 'Smith',
@@ -48,7 +48,7 @@ EasyLlama::Client.Learners.create({
 })
 
 # Update a learner
-EasyLlama::Client.Learners.update(
+EasyLlama::Client::Learners.update(
   1,
   {
     first_name: 'John',
