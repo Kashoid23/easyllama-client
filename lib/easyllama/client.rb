@@ -39,7 +39,7 @@ module EasyLlama
 
           JSON.parse(response.body)[key]
         else
-          { 'error' => response.message }
+          { 'code' => response.code, 'error' => response.message }
         end
       end
 
