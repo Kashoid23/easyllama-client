@@ -25,7 +25,7 @@ module EasyLlama
         execute_request(uri, request)
       end
 
-      # Parses the response body and returns the value corresponding to the provided key.
+      # Parses the response body.
       # If the response is successful, returns the value for the key.
       # If the response is unsuccessful, returns an error code and message.
       #

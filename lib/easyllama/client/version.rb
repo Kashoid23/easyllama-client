@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Easyllama
+module EasyLlama
   module Client
     VERSION = '0.1.2'
   end

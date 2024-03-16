@@ -4,7 +4,7 @@ require_relative 'lib/easyllama/client/version'
 
 Gem::Specification.new do |spec|
   spec.name = 'easyllama-client'
-  spec.version = Easyllama::Client::VERSION
+  spec.version = EasyLlama::Client::VERSION
   spec.authors = ['Vitalii Kashoid']
   spec.email = ['kashoyid@gmail.com']
 
