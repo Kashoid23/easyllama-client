@@ -34,6 +34,7 @@ module EasyLlama
       # @return [Object] The value corresponding to the key or an error message.
       def parse_response(response, key = nil)
         if response.is_a?(Net::HTTPSuccess)
+          return {} if response.body.nil?
           return JSON.parse(response.body) if key.nil?
 
           JSON.parse(response.body)[key]
