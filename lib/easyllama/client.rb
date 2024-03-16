@@ -3,6 +3,10 @@
 require 'net/http'
 require 'json'
 
+require_relative 'locations'
+require_relative 'learners'
+require_relative 'trainings'
+
 module EasyLlama
   # This class provides methods for interacting with the Easy Llama API.
   class Client
@@ -34,14 +38,6 @@ module EasyLlama
         else
           { 'error' => response.message }
         end
-      end
-
-      # Sends a GET request to retrieve locations.
-      #
-      # @return [Object] The locations or an error message.
-      def locations
-        response = send_request(path: '/locations')
-        response_body(response, 'locations')
       end
 
       private
