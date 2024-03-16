@@ -37,7 +37,7 @@ EasyLlama::Client::Learners.find(1)
 EasyLlama::Client::Learners.create({ first_name: 'John', middle_name: 'Doe', last_name: 'Smith', title: 'SE', email: 'test@mail.com', phone: '123-456-7890', role: 'supervisor' })
 
 # Update a learner
-EasyLlama::Client::Learners.create(1, { role: 'non-supervisor' })
+EasyLlama::Client::Learners.update(1, { role: 'non-supervisor' })
 
 # Assign a training to a learner
 EasyLlama::Client::Learners.assign_training_to_learner(training_id: 1, learner_id: 1)
