@@ -27,11 +27,11 @@ module EasyLlama
 
       # Parses the response body and returns the value corresponding to the provided key.
       # If the response is successful, returns the value for the key.
-      # If the response is unsuccessful, returns an error message.
+      # If the response is unsuccessful, returns an error code and message.
       #
       # @param response [Net::HTTPResponse] The HTTP response.
       # @param key [String] The key to retrieve from the response body.
-      # @return [Object] The value corresponding to the key or an error message.
+      # @return [Object] The empty hash, parsed response body, value corresponding to the key or error code and message.
       def parse_response(response, key = nil)
         if response.is_a?(Net::HTTPSuccess)
           return {} if response.body.nil?
