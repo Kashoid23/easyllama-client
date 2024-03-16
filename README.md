@@ -25,7 +25,7 @@ Then, you can use the gem to interact with the Easy Llama API:
 EasyLlama::Client::Locations.all
 
 # Create a new location
-EasyLlama::Client::Locations.create({ name: 'New Office', region_id: 1 })
+EasyLlama::Client::Locations.create({ name: 'New Office' })
 
 # Retrieve all learners
 EasyLlama::Client::Learners.all
