@@ -40,7 +40,7 @@ EasyLlama::Client::Learners.create({ first_name: 'John', middle_name: 'Doe', las
 EasyLlama::Client::Learners.create(1, { role: 'non-supervisor' })
 
 # Assign a training to a learner
-EasyLlama::Client.Learners.assign_training_to_learner(training_id: 1, learner_id: 1)
+EasyLlama::Client::Learners.assign_training_to_learner(training_id: 1, learner_id: 1)
 
 # Retrieve all trainings
 EasyLlama::Client::Trainings.all
