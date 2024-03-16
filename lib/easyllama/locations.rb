@@ -2,6 +2,7 @@
 
 module EasyLlama
   class Client
+    # This class provides methods for interacting with the Easy Llama API for locations.
     class Locations
       class << self
         # Sends a GET request to retrieve all locations.
@@ -9,7 +10,8 @@ module EasyLlama
         # @return [Object] The locations or an error message.
         def all
           response = EasyLlama::Client.send_request(path: '/locations')
-          EasyLlama::Client.response_body(response, 'locations')
+
+          EasyLlama::Client.parse_response(response, 'locations')
         end
 
         # Sends a POST request to create a location.
@@ -18,7 +20,8 @@ module EasyLlama
         # @return [Object] The created location or an error message.
         def create(location_attributes = {})
           response = EasyLlama::Client.send_request(path: '/locations', method: :post, body: location_attributes)
-          EasyLlama::Client.response_body(response, 'location')
+
+          EasyLlama::Client.parse_response(response, 'location')
         end
       end
     end

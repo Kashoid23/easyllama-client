@@ -32,8 +32,10 @@ module EasyLlama
       # @param response [Net::HTTPResponse] The HTTP response.
       # @param key [String] The key to retrieve from the response body.
       # @return [Object] The value corresponding to the key or an error message.
-      def response_body(response, key)
+      def parse_response(response, key = nil)
         if response.is_a?(Net::HTTPSuccess)
+          return JSON.parse(response.body) if key.nil?
+
           JSON.parse(response.body)[key]
         else
           { 'error' => response.message }
