@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    easyllama-client (0.1.3)
+    easyllama-client (0.2.0)
       json
       net-http
 
