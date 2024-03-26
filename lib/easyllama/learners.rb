@@ -59,10 +59,25 @@ module EasyLlama
         parse_response!(response)
       end
 
+      # Sends a DELETE request to unassign a training from a learner.
+      #
+      # @param learner_training_id [Integer] The ID of the learner training.
+      # @param learner_id [Integer] The ID of the learner.
+      # @return [Object] An error message or an empty hash.
+      def unassign_training_from_learner(learner_training_id:, learner_id:)
+        response = send_request(
+          path: "/learners/#{learner_id}/learner_trainings/#{learner_training_id}",
+          method: :delete,
+          body: { learner_id:, learner_training_id: }
+        )
+
+        parse_response!(response)
+      end
+
       # Sends a DELETE request to archive a learner by ID.
       #
       # @param id [Integer] The ID of the learner.
-      # @return [Object] The updated learner or an error message.
+      # @return [Object] An error message or an empty hash.
       def archive(id)
         response = send_request(path: "/learners/#{id}", method: :delete)
 

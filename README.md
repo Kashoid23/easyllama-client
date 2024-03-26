@@ -45,6 +45,9 @@ EasyLlama::Client.learners.update(1, { role: 'non-supervisor' })
 # Assign a training to a learner
 EasyLlama::Client.learners.assign_training_to_learner(training_id: 1, learner_id: 1)
 
+# Unassign a training from a learner
+EasyLlama::Client.learners.unassign_training_from_learner(learner_training_id: 1, learner_id: 1)
+
 # Fetch all courses/trainings
 EasyLlama::Client.trainings.all
 ```
