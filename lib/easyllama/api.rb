@@ -60,7 +60,7 @@ module EasyLlama
         request['content-type'] = 'application/json'
         request['accept'] = 'application/json'
         request['authorization'] = "Bearer #{@token}"
-        request.body = body if body.present?
+        request.body = body.to_json if body.present?
         request
       end
 
