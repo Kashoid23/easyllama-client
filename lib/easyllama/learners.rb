@@ -48,7 +48,7 @@ module EasyLlama
       #
       # @param training_id [Integer] The ID of the training.
       # @param learner_id [Integer] The ID of the learner.
-      # @return [Object] The training assignment details or an error message.
+      # @return [Object] The learner training or an error message.
       def assign_training_to_learner(training_id:, learner_id:)
         response = send_request(
           path: "/learners/#{learner_id}/learner_trainings",
@@ -56,7 +56,7 @@ module EasyLlama
           body: { learner_id:, training_id: }
         )
 
-        parse_response!(response)
+        parse_response!(response, 'learner_training')
       end
 
       # Sends a DELETE request to unassign a training from a learner.
