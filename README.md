@@ -7,7 +7,7 @@ A Ruby gem for interacting with the Easy Llama API.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'easyllama-client', '>= 0.2.1'
+gem 'easyllama-client', '>= 0.2.2'
 ```
 
 ## Usage
