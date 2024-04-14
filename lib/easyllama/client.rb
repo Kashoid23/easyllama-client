@@ -26,6 +26,10 @@ module EasyLlama
       def trainings
         Trainings.new(api_token)
       end
+
+      def learner_trainings
+        LearnerTrainings.new(api_token)
+      end
     end
   end
 end

@@ -53,6 +53,9 @@ EasyLlama::Client.learners.unassign_training_from_learner(learner_training_id: 1
 # Fetch all courses/trainings
 EasyLlama::Client.trainings.all
 EasyLlama::Client.trainings.all(page: 2)
+
+# Fetch all assigned courses
+LearnerTrainings::Client.learner_trainings.where(page: 2, learner_id: 1, training_id: 1, status: 'completed', sort: '-completed_at')
 ```
 
 Read https://dashboard.easyllama.com/apidocs to see all available attributes
