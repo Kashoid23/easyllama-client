@@ -8,7 +8,7 @@ module EasyLlama
       #
       # @param page [Integer] The page number.
       # @return [Array] The trainings or an error message.
-      def all(page:)
+      def all(page: 1)
         response = send_request(path: '/trainings', body: { page: })
 
         parse_response!(response, 'trainings')
