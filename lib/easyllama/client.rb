@@ -8,6 +8,7 @@ require_relative 'oauth'
 require_relative 'locations'
 require_relative 'learners'
 require_relative 'trainings'
+require_relative 'learner_trainings'
 
 module EasyLlama
   # This class provides methods for interacting with the Easy Llama API interface.
