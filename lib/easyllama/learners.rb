@@ -6,9 +6,10 @@ module EasyLlama
     class Learners < Api
       # Sends a GET request to retrieve all learners.
       #
-      # @return [Object] The learners or an error message.
-      def all
-        response = send_request(path: '/learners')
+      # @param page [Integer] The page number.
+      # @return [Array] The learners or an error message.
+      def all(page:)
+        response = send_request(path: '/learners', body: { page: })
 
         parse_response!(response, 'learners')
       end

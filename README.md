@@ -23,12 +23,14 @@ Then, you can use the gem to interact with the Easy Llama API:
 ```ruby
 # Fetch all business locations
 EasyLlama::Client.locations.all
+EasyLlama::Client.locations.all(page: 2)
 
 # Add a new business location
 EasyLlama::Client.locations.create({ name: 'New Office' })
 
 # Fetch all active learners
 EasyLlama::Client.learners.all
+EasyLlama::Client.learners.all(page: 2)
 
 # Add a new learner
 EasyLlama::Client.learners.create({ first_name: 'John', middle_name: 'Doe', last_name: 'Smith', title: 'SE', email: 'test@mail.com', phone: '123-456-7890', role: 'supervisor' })
@@ -50,6 +52,7 @@ EasyLlama::Client.learners.unassign_training_from_learner(learner_training_id: 1
 
 # Fetch all courses/trainings
 EasyLlama::Client.trainings.all
+EasyLlama::Client.trainings.all(page: 2)
 ```
 
 Read https://dashboard.easyllama.com/apidocs to see all available attributes

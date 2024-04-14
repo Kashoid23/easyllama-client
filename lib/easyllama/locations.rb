@@ -6,9 +6,10 @@ module EasyLlama
     class Locations < Api
       # Sends a GET request to retrieve all locations.
       #
-      # @return [Object] The locations or an error message.
-      def all
-        response = send_request(path: '/locations')
+      # @param page [Integer] The page number.
+      # @return [Array] The locations or an error message.
+      def all(page:)
+        response = send_request(path: '/locations', body: { page: })
 
         parse_response!(response, 'locations')
       end

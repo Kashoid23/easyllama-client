@@ -6,9 +6,10 @@ module EasyLlama
     class Trainings < Api
       # Sends a GET request to retrieve all trainings.
       #
-      # @return [Object] The trainings or an error message.
-      def all
-        response = send_request(path: '/trainings')
+      # @param page [Integer] The page number.
+      # @return [Array] The trainings or an error message.
+      def all(page:)
+        response = send_request(path: '/trainings', body: { page: })
 
         parse_response!(response, 'trainings')
       end
